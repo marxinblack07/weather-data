@@ -1,0 +1,207 @@
+@use '../base/theme' as *;
+@use '../base/colors' as co;
+@use '../base/variables' as var;
+@use '../component/component' as comp;
+@import '/node_modules/animate.css/animate.css';
+
+.website
+{
+    width: 100%;
+    // background-image: linear-gradient(to left top, #86c8bc, #86d2b9, #8cdcb2, #9ae5a7, #aeec99, #bbf090, #caf388, #daf57f, #e1f67b, #e9f778, #f1f774, #f9f871);
+    background-image: linear-gradient(to left bottom, #f7d060, #e0d569, #cbd877, #b7da86, #a7da96, #99d59c, #8cd0a2, #82caa7, #73bfa5, #66b4a1, #5ba99e, #519e99);
+    z-index: index($list: var.$z-index, $value: background);
+    font-family: Terembura;
+    background-repeat: no-repeat;
+}
+@media (max-width: map-get(var.$breakpoint,lg))
+{
+    .website
+    {
+        // background-image: linear-gradient(to left top, #86c8bc, #89d9b4, #a0e7a2, #c7f289, #f9f871);
+        background-image: linear-gradient(to left bottom, #f7d060, #d9d66e, #bed981, #a7da96, #98d8aa);
+    }
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro
+{
+    padding: 10rem 0;
+    height: 100%;
+    &__centered
+    {
+        padding: 2.5rem 2.5rem;
+        position: relative;
+        height: auto;
+        max-width: max-content;
+        border-radius: 5px;
+        box-shadow: 1px 3px 10px;
+        display: grid;
+        gap: 1.2rem;
+        &::before
+        {
+            @extend comp, .before-item !optional;
+            background-color: transparent;
+            backdrop-filter: brightness(75%);
+            z-index: -1;
+        }
+        overflow: hidden;
+    }
+    &--title
+    {
+        font-size: 45pt;
+        text-transform: capitalize;
+        color: $color-background;
+        text-shadow: 2px 1.5px 5px $color-main;
+        filter: blur(0.5px) brightness(150%);
+    }
+    &--description
+    {
+        font-size: 14pt;
+        text-transform: capitalize;
+        color: #fff;
+        filter: blur(0.3px);
+    }
+    &--btn
+    {
+        padding: 0.8rem 1rem;
+        border: none;
+        border-radius: 2px 5px;
+        min-width: 5rem;
+        font-family: Terembura;
+        font-size: 12pt;
+        text-transform: capitalize;
+        color: $color-border;
+        background-color: $color-background;
+        box-shadow: 1px 1px 4px $color-border;
+        &:hover
+        {
+            background-color: $color-highlight;
+            color: map-get($map: co.$color-red, $key: r100);
+            transition: all ease-in-out 0.2s;
+            box-shadow: 2px 2px 5px $color-border;
+        }
+        &:active
+        {
+            background-color: #fff;
+            transition: all ease-in-out 0s;
+            box-shadow: 2px 2px 5px $color-border inset;
+        }
+        &__container
+        {
+            padding: 1rem 3rem;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+.weather
+{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    &__centered
+    {
+        padding: 0.5rem 0.5rem;
+        height: auto;
+        max-width: min-content;
+        display: grid;
+        position: relative;
+        @extend comp, .center !optional;
+        border-radius: 5px;
+        box-shadow: 1px 3px 10px;
+        overflow: hidden;
+        &::before
+        {
+            @extend comp, .before-item !optional;
+            background-color: transparent;
+            backdrop-filter: brightness(75%);
+            // -webkit-backdrop-filter: brightness(30%);
+            z-index: -1;
+        }
+    }
+
+    $same-width: 15rem;
+
+    &--image
+    {
+        margin: 1rem;
+        padding: 1.5rem 1rem;
+        background-color: $color-background;
+        box-shadow: 2.5px 2.5px 5px $color-border;
+        border-radius: 5px;
+        display: grid;
+        text-align: center;
+        .weather--temperature
+        {
+            padding-top: 1rem;
+            font-size: 26pt;
+        }
+    }
+    &--icon
+    {
+        @extend comp, .center !optional;
+        font-size: 36pt;
+        padding: 0.5rem;
+        border: 1px solid;
+        border-color: $color-border;
+        box-shadow: 2px 1px 3px $color-border ;
+        border-radius: 2px 10px;
+    }
+    &--divider
+    {
+        @extend comp, .divider !optional;
+        width: $same-width + 1rem;
+        margin: auto;
+        background-color: $color-background;
+    }
+    &--info
+    {
+        display: grid;
+        text-align: center;
+        background-color: $color-background;
+        box-shadow: 2px 2px 4px $color-border;
+        gap: 0.5rem;
+        margin: 1rem;
+        padding: 1.5rem 0.5rem;
+        border-radius: 5px;
+        .weather--divider
+        {
+            margin: 1rem auto;
+            width: calc($same-width - 3rem);
+            background-color: $color-border;
+        }
+    }
+    &--temperature , &--text
+    {
+        color: map-get($map: $color-maps, $key: bl-0);
+        span
+        {
+            margin-left: 0.2rem;
+            padding: 0.2rem;
+            color: $color-border;
+            background-color: $color-highlight;
+            border-radius: 5px;
+        }
+    }
+    &--range
+    {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    &--temperature
+    {
+        font-size: 15pt;
+        color: $color-border;
+    }
+    &--text
+    {
+        font-size: 18pt;
+        color: $color-border;
+    }
+}

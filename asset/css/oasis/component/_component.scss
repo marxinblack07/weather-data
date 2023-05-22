@@ -1,0 +1,58 @@
+@use '../base/theme' as theme;
+@use '../base/variables' as var;
+.font--text
+{
+    font-family: theme.$font-text;
+}
+.font--brand
+{
+    font-family: theme.$font-brand;
+}
+.container{
+	max-width: map-get($map: var.$breakpoint, $key: xl);
+	margin:auto;
+}
+.row
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+.p-center
+{
+	justify-content: center;
+}
+.v-center
+{
+	align-items: center;
+}
+.center
+{
+	@extend .p-center !optional;
+	@extend .v-center !optional;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.before-item
+{
+	content: '';
+	top:-30px;left: -30px;right: -30px;bottom: -30px;
+	position: absolute;
+	z-index: -1;
+}
+.divider
+{
+	background-color: #333;
+	border-radius: 5px;
+	height: 0.25rem;
+	margin: 1rem 0;
+}
+
+.hidden
+{
+	display: none;
+}
+.page-transition
+{
+	transition: all ease-in-out 0.5s;
+}

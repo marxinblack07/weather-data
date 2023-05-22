@@ -1,0 +1,14 @@
+@use '../base/theme' as *;
+@use '../base/variables' as var;
+.btn
+{
+    border: 1px solid ;
+    border-radius: map-get($map: var.$radius, $key: btn-3);
+    // background-color: $color-background;
+    padding: 0.3rem 1rem;
+    i
+    {
+        font-size:  $size-md;
+        // color:      $color-main;
+    }
+}

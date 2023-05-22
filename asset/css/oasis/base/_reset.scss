@@ -1,0 +1,52 @@
+@font-face
+{
+    font-family: ChironSung;
+    src: 'Chiron Sung HK WS';
+}
+@font-face
+{
+    //  Chinese Content font.
+    font-family: Iansui;
+    src: url('/asset/fonts/iansui/Iansui094-Regular.woff');
+}
+@font-face
+{
+    //  English Content font.
+    font-family: Terembura;
+    src: url('/asset/fonts/Terembura/Terembura.woff');
+}
+@font-face
+{
+    font-family: EthosBrand;
+    src: url('/asset/fonts/EthosTypefaces/ETHOS-REGULAR.OTF');
+}
+//-------------------------------------------------------------------------------------
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    &, &::before, &::after
+    {
+        box-sizing: border-box;
+    }
+}
+html
+{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+body
+{
+    font-family: 'Terembura', 'Iansui', system-ui, -apple-system;
+}
+ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    text-decoration: none;
+}

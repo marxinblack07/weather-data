@@ -1,0 +1,78 @@
+ /// @name Variables.scss
+/// @content Every variables I've stored.
+///*Variables should follow `$component-state-property-size` consistent naming.
+/// @example $nav-link-disabled-color and $modal-content-box-shadow-xs.
+/// @author MarxInBlack
+//================================================================
+/// @name Breakpoints
+//* Breakpoints for screen width and grid template.
+//----------------------------------------------------------------
+$breakpoint:(
+    xs:         0px,
+    sm:         576px,
+    md:         768px,
+    lg:         992px,
+    xl:         1200px,
+    xxl:        1400px,
+)!default;
+
+
+/// @name Radius
+// Radius Settings
+//----------------------------------------------------------------
+$radius:(
+    navbar:     0px 0px 10px 10px,
+    navbar-2:   5px 5px 10px 10px,
+    img:        5px,
+    block:      10px,
+    block-2:    10px 10px 5px 5px,
+    btn:        5px,
+    btn-2:      10px 0px,
+    btn-3:      50px,
+    circle:     50%,
+)!default;
+
+
+///@name layer-height
+// Configure each layers' z index.
+//----------------------------------------------------------------
+$z-index:(
+    bg,
+    sections,
+    block,
+    element,
+    decoration,
+    navbar,
+    dropdown,
+    panel,
+)!default;
+
+/// @name sizes.
+//  Configure the size.
+$size:
+(
+    xs: 10px,
+    sm: 16px,
+    md: 25px,
+    lg: 40px,
+    xl: 60px,
+);
+
+/// @name shadow.
+// Configure shadow type.
+//----------------------------------------------------------------
+$shadows:
+(
+    btn:        0px 0px 10px,
+    navbar:     0px 4px 10px,
+)!default;
+
+/// @name transition
+/// Configure transition.
+//----------------------------------------------------------------
+$transition:(
+    base:           all .2s ease-in-out,
+    fade:           opacity .15s linear,
+    collapsed:       height .35s ease,
+)!default;
+

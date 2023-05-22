@@ -1,0 +1,186 @@
+/// @name Colors
+/// @content All the colors I stored.
+///*Colors let users use color easily.
+//----------------------------------------------------------------
+$color-red:
+(
+    r100:       #630606,//color hunt.
+    r200:       #890F0D,//color hunt.
+    r300:       #a6192e,//casemate-2.
+    r310:       #bc0024,//canon.
+    r320:       #c00c16,//christmas theme.
+    r400:       #e01f3d,//Beats's red.
+    r500:       #e01f3d,//Beats's red.
+    r600:       #ee4f4f,//buffer-2.
+    r700:       #F5718A,//color hunt.
+)!default;
+
+
+$color-blue:
+(
+    b100:       #0a2239,//redox
+    b110:       #102a42,//demo grey 1
+    b120:       #0F3057,//color hunt.
+    b130:       #243a52,//demo grey 2
+    b200:       #324d67,//demo grey 3
+    b210:       #1b4050,//christmas theme.
+    b300:       #004b79,//american-red-cross 11
+    b400:       #00587A,//color hunt.
+    b500:       #067ab4,//att3
+    b600:       #2b82ad,//about me.
+    b700:       #1aafd0,//asana2
+    b800:       #74d2e7,//airbus
+    b900:       #58C8F5,//color hunt.
+)!default;
+
+
+$color-green:
+(
+    g100:       #192018,//christmas theme2.
+    g300:       #135D50,//christmas theme.
+    g400:       #388037,//make myself.
+    g600:       #2c9f45,//adidas5
+    g700:       #a4c639,//android theme.
+    g800:       #01cd74,//ars-technica-2
+)!default;
+
+
+$color-yellow:
+(
+    y100:       #ffc600,//mcdonalds 3.
+    y110:       #ffcc00,//national geographic.
+    y200:       #ffd659,//nascar
+    y210:       #ffde57,//python
+    y300:       #F5EB40,//color hunt.
+    y400:       #fffc00,//snapchat
+    y800:       #FAEAB1,//color hunt.
+)!default;
+
+
+$color-black:
+(
+    b100:       #000000,//pure black.
+    b200:       #231f20,//atos-2.
+    b300:       #333333,//The popular black.
+    b400:       #414f5a,//plaxo.
+)!default;
+
+$color-white:
+(
+    // 100: Pure white.
+    w100:       #ffffff,//pure white.
+    // 200: Mixed with yellow.
+    w200:       #E7E7DE,//color hunt.
+    w210:       #fffaeb,//demo primary 10
+    w220:       #f4f4f4,//canva.
+    // 300: Mixed with blue.
+    w300:       #f1f5f8,//demo grey 10
+)!default;
+//----------------------------------------------------------------
+// Colors Mixed with different colors.
+
+// Grey.
+$color-grey:
+(
+    //100:Made By Blue.
+    g100:       #36454f,//postmate 2.
+    g110:       #48647f,//demo grey 4
+    g120:       #617d98,//demo grey 5
+    g130:       #829ab0,//demo grey 6
+    g140:       #9eb2c7,//demo grey 7
+    g150:       #bcccdc,//demo grey 8
+    g160:       #bcccdc,//demo grey 9
+    //200:made By Red.
+    g200:       #c5c3c39c,//made myself.
+)!default;
+
+// Brown.
+$color-brown:
+(
+    b100:       #513c06,//demo primary 1
+    b200:       #7a5c10,//demo primary 2
+    b300:       #a27c1a,//demo primary 3
+    b400:       #c8992d,//demo primary 4
+    b410:       #dab989,//christmas theme.
+    b420:       #c7bfa4,//christmas theme.
+    b430:       #dbc696,//Planner By Elena Lin.
+    b440:       #dfcfb9,//christmas theme.
+    b500:       #e9b949,//demo primary 5
+    b600:       #f7d06e,//demo primary 6
+    b700:       #f9da8b,//demo primary 7
+    b800:       #f8e3a5,//demo primary 8
+    b900:       #fceec5,//demo primary 9
+    b910:       #f3e9dc,//christmas theme.
+)!default;
+
+// Blue Green.
+$color-blueGreen:
+(
+    //Search by myself.
+    g100:       #008891,//color hunt.
+)!default;
+
+// Orange.
+$color-orange:
+(
+    o500:       #E83A14,//Color hunt.
+    o700:       #ff9800,//Orange.
+)!default;
+
+//----------------------------------------------------------------
+// Theme Color.
+
+//Introduction Page.
+$color-theme-introduction:
+(
+    b100:       #0F3057,//Dark Blue.
+    b200:       #00587A,//Blue.
+    b210:       #005AA7,//      Ui gradient.
+	b300:       #008891,//      Color mixed with blue & green.
+	b400:       #58C8F5,//      Light Blue.
+    y100:       #F5EB40,//      Yellow.
+	y200:       #FAEAB1,//      Lighten Yellow.
+    y210:       #fffde4,//      Ui gradient.
+	y300:       #E7E7DE,//      Grey.
+	r100:       #F5718A,//      Red.
+    w100:       #ffffff,//      Pure White.
+    w200:       #f4f4f4,//      Canva.
+)!default;
+
+//Demo.
+$color-theme-demo:
+(
+    // Yellow.
+    y1:         #513c06,//demo primary 1
+    y2:         #7a5c10,//demo primary 2
+    y3:         #a27c1a,//demo primary 3
+    y4:         #c8992d,//demo primary 4
+    y5:         #e9b949,//demo primary 5
+    y6:         #f7d06e,//demo primary 6
+    y7:         #f9da8b,//demo primary 7
+    y8:         #f8e3a5,//demo primary 8
+    y9:         #fceec5,//demo primary 9
+    y10:        #fffaeb,//demo primary 10
+    // Grey mixed with blue.
+    g1:         #102a42,//demo grey 1
+    g2:         #243a52,//demo grey 2
+    g3:         #324d67,//demo grey 3
+    g4:         #48647f,//demo grey 4
+    g5:         #617d98,//demo grey 5
+    g6:         #829ab0,//demo grey 6
+    g7:         #9eb2c7,//demo grey 7
+    g8:         #bcccdc,//demo grey 8
+    g9:         #bcccdc,//demo grey 9
+    g10:        #f1f5f8,//demo grey 10
+)!default;
+
+//  MarxinBlack.me
+$color-theme-mib:
+(
+    wh100:      #f9f9f9,//  Color hunt.
+    br100:      #ded5c4,//  Color hunt.
+    or100:      #ef7e56,//  Color hunt.
+    bl100:      #305973,//  Color hunt.
+    bl200:      #66bcf2,//  Adobe Color.
+    bl300:      #254559,//  Adobe color.
+);

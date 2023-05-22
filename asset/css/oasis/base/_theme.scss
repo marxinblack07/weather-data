@@ -1,0 +1,28 @@
+@use './colors' as co;
+@use '../base/variables' as var;
+
+$font-text: 'Iansui','Terembura';
+$font-brand: 'ChironSung','EthosBrand';
+
+//  Colors Choice.
+$color-maps:(
+    bl-0:               #333,
+    gr-0:               #98D8AA,
+    gr-1:               #003a18,
+    yl-0:               #F7D060,
+    yl-1:               #F3E99F,
+    rd-0:               #FF6D60,
+    wh-0:               #fff,
+    wh-1:               #e4e6dd,
+);
+$color-main:    map-get($map: $color-maps, $key: gr-0);
+$color-background:map-get($map: $color-maps, $key: wh-1);
+$color-border:      map-get($map: $color-maps, $key: gr-1);
+$color-highlight:   map-get($map: $color-maps, $key: yl-0);
+$color-warn:    map-get($map: $color-maps, $key: rd-0);
+/// @name Size.
+$size-xs: map-get($map: var.$size, $key: xs);
+$size-sm: map-get($map: var.$size, $key: sm);
+$size-md: map-get($map: var.$size, $key: md);
+$size-lg: map-get($map: var.$size, $key: lg);
+$size-xl: map-get($map: var.$size, $key: xl);

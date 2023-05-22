@@ -1,0 +1,77 @@
+@use '../component/' as com;
+@use '../base/variables' as var;
+@use '../base/theme' as *;
+
+.header
+{
+    display: block;
+    position: fixed;
+    left: 5%;
+    top:0;
+    width: 90%;
+    // max-width: map-get($map: var.$breakpoint, $key: xl);
+    height: 100%;
+    max-height: 3rem;
+    background-color: transparent;
+    z-index: index($list: var.$z-index, $value: navbar);
+    border: 1px solid;
+    border-radius: map-get($map: var.$radius, $key: navbar);
+    padding: 0.5rem 1rem;
+    &--container
+    {
+        @extend com, .container !optional;
+        &__centered
+        {
+            @extend com, .row !optional;
+            @extend com, .v-center !optional;
+            flex-wrap: nowrap;
+        }
+    }
+    &--brand
+    {
+        flex: 0 0 17%;
+        justify-content: flex-start;
+        .header--logo
+        {
+            font-size: 30px;
+            // color: $color-main;
+        }
+        font-weight: 700;
+    }
+    &--navigation
+    {
+        flex: 0 0 66%;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    &--icon
+    {
+        flex: 0 0 17%;
+        display: flex;
+        justify-content: flex-end;
+        &__list
+        {
+            @extend com, .btn !optional;
+            padding: 0.2rem;
+            border-radius: map-get($map: var.$radius, $key: btn);
+            @extend .header--btn;
+        }
+        .icon--social
+        {
+            border: none;
+        }
+        .icon--menu
+        {
+            display: none;
+        }
+    }
+    &--logo
+    {
+        @extend comp, .font--brand !optional;
+    }
+    &--btn
+    {
+        font-size: 19px;
+    }
+}

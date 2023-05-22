@@ -1,0 +1,326 @@
+@import '/node_modules/animate.css/animate.css';
+.font--text {
+  font-family: "Iansui", "Terembura";
+}
+
+.font--brand, .header--logo {
+  font-family: "ChironSung", "EthosBrand";
+}
+
+.container, .header--container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row, .header--container__centered {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p-center, .center, .weather__centered, .weather--icon {
+  justify-content: center;
+}
+
+.v-center, .header--container__centered, .center, .weather__centered, .weather--icon {
+  align-items: center;
+}
+
+.center, .weather__centered, .weather--icon {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.before-item, .intro__centered::before, .weather__centered::before {
+  content: "";
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  position: absolute;
+  z-index: -1;
+}
+
+.divider, .weather--divider {
+  background-color: #333;
+  border-radius: 5px;
+  height: 0.25rem;
+  margin: 1rem 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.page-transition {
+  transition: all ease-in-out 0.5s;
+}
+
+.btn, .header--icon__list {
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+}
+.btn i, .header--icon__list i {
+  font-size: 25px;
+}
+
+.header {
+  display: block;
+  position: fixed;
+  left: 5%;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  max-height: 3rem;
+  background-color: transparent;
+  z-index: 6;
+  border: 1px solid;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0.5rem 1rem;
+}
+.header--container__centered {
+  flex-wrap: nowrap;
+}
+.header--brand {
+  flex: 0 0 17%;
+  justify-content: flex-start;
+  font-weight: 700;
+}
+.header--brand .header--logo {
+  font-size: 30px;
+}
+.header--navigation {
+  flex: 0 0 66%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.header--icon {
+  flex: 0 0 17%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header--icon__list {
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+.header--icon .icon--social {
+  border: none;
+}
+.header--icon .icon--menu {
+  display: none;
+}
+.header--btn, .header--icon__list {
+  font-size: 19px;
+}
+
+@font-face {
+  font-family: ChironSung;
+  src: "Chiron Sung HK WS";
+}
+@font-face {
+  font-family: Iansui;
+  src: url("/asset/fonts/iansui/Iansui094-Regular.woff");
+}
+@font-face {
+  font-family: Terembura;
+  src: url("/asset/fonts/Terembura/Terembura.woff");
+}
+@font-face {
+  font-family: EthosBrand;
+  src: url("/asset/fonts/EthosTypefaces/ETHOS-REGULAR.OTF");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Terembura", "Iansui", system-ui, -apple-system;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.website {
+  width: 100%;
+  background-image: linear-gradient(to left bottom, #f7d060, #e0d569, #cbd877, #b7da86, #a7da96, #99d59c, #8cd0a2, #82caa7, #73bfa5, #66b4a1, #5ba99e, #519e99);
+  font-family: Terembura;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .website {
+    background-image: linear-gradient(to left bottom, #f7d060, #d9d66e, #bed981, #a7da96, #98d8aa);
+  }
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  padding: 10rem 0;
+  height: 100%;
+}
+.intro__centered {
+  padding: 2.5rem 2.5rem;
+  position: relative;
+  height: auto;
+  max-width: max-content;
+  border-radius: 5px;
+  box-shadow: 1px 3px 10px;
+  display: grid;
+  gap: 1.2rem;
+  overflow: hidden;
+}
+.intro__centered::before {
+  background-color: transparent;
+  backdrop-filter: brightness(75%);
+  z-index: -1;
+}
+.intro--title {
+  font-size: 45pt;
+  text-transform: capitalize;
+  color: #e4e6dd;
+  text-shadow: 2px 1.5px 5px #98D8AA;
+  filter: blur(0.5px) brightness(150%);
+}
+.intro--description {
+  font-size: 14pt;
+  text-transform: capitalize;
+  color: #fff;
+  filter: blur(0.3px);
+}
+.intro--btn {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 2px 5px;
+  min-width: 5rem;
+  font-family: Terembura;
+  font-size: 12pt;
+  text-transform: capitalize;
+  color: #003a18;
+  background-color: #e4e6dd;
+  box-shadow: 1px 1px 4px #003a18;
+}
+.intro--btn:hover {
+  background-color: #F7D060;
+  color: #630606;
+  transition: all ease-in-out 0.2s;
+  box-shadow: 2px 2px 5px #003a18;
+}
+.intro--btn:active {
+  background-color: #fff;
+  transition: all ease-in-out 0s;
+  box-shadow: 2px 2px 5px #003a18 inset;
+}
+.intro--btn__container {
+  padding: 1rem 3rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.weather__centered {
+  padding: 0.5rem 0.5rem;
+  height: auto;
+  max-width: min-content;
+  display: grid;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 1px 3px 10px;
+  overflow: hidden;
+}
+.weather__centered::before {
+  background-color: transparent;
+  backdrop-filter: brightness(75%);
+  z-index: -1;
+}
+.weather--image {
+  margin: 1rem;
+  padding: 1.5rem 1rem;
+  background-color: #e4e6dd;
+  box-shadow: 2.5px 2.5px 5px #003a18;
+  border-radius: 5px;
+  display: grid;
+  text-align: center;
+}
+.weather--image .weather--temperature {
+  padding-top: 1rem;
+  font-size: 26pt;
+}
+.weather--icon {
+  font-size: 36pt;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-color: #003a18;
+  box-shadow: 2px 1px 3px #003a18;
+  border-radius: 2px 10px;
+}
+.weather--divider {
+  width: 16rem;
+  margin: auto;
+  background-color: #e4e6dd;
+}
+.weather--info {
+  display: grid;
+  text-align: center;
+  background-color: #e4e6dd;
+  box-shadow: 2px 2px 4px #003a18;
+  gap: 0.5rem;
+  margin: 1rem;
+  padding: 1.5rem 0.5rem;
+  border-radius: 5px;
+}
+.weather--info .weather--divider {
+  margin: 1rem auto;
+  width: 12rem;
+  background-color: #003a18;
+}
+.weather--temperature, .weather--text {
+  color: #333;
+}
+.weather--temperature span, .weather--text span {
+  margin-left: 0.2rem;
+  padding: 0.2rem;
+  color: #003a18;
+  background-color: #F7D060;
+  border-radius: 5px;
+}
+.weather--range {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.weather--temperature {
+  font-size: 15pt;
+  color: #003a18;
+}
+.weather--text {
+  font-size: 18pt;
+  color: #003a18;
+}
+
+/*# sourceMappingURL=style.css.map */

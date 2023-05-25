@@ -140,8 +140,11 @@
 }
 
 html {
+  width: 100vw;
+  height: 100vh;
   scroll-behavior: smooth;
   font-size: 100%;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -159,17 +162,10 @@ a {
 }
 
 .website {
-  width: 100%;
   background-image: linear-gradient(to left bottom, #f7d060, #e0d569, #cbd877, #b7da86, #a7da96, #99d59c, #8cd0a2, #82caa7, #73bfa5, #66b4a1, #5ba99e, #519e99);
   font-family: Terembura;
-  background-repeat: no-repeat;
 }
 
-@media (max-width: 992px) {
-  .website {
-    background-image: linear-gradient(to left bottom, #f7d060, #d9d66e, #bed981, #a7da96, #98d8aa);
-  }
-}
 .main {
   display: flex;
   justify-content: center;
@@ -321,6 +317,28 @@ a {
 .weather--text {
   font-size: 18pt;
   color: #003a18;
+}
+
+.btn__refresh {
+  display: block;
+  position: absolute;
+  bottom: 18rem;
+  right: 1.2rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 7;
+  background-color: #F7D060;
+  border-color: #e4e6dd;
+  box-shadow: 2px 2px 4px #003a18;
+}
+
+@media (max-width: 992px) {
+  .website {
+    background-image: linear-gradient(to left bottom, #f7d060, #d9d66e, #bed981, #a7da96, #98d8aa);
+  }
+  .intro {
+    max-width: 85vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

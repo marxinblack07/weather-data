@@ -38,7 +38,8 @@ const todayShow = async () =>
                 <p class="weather--text">${today.condition.text}</p>
             </div>
         </div>
-    </div>`;
+    </div>
+    <button class="btn__refresh btn"><i class="fa-solid fa-arrows-rotate"></i></button>`;
     document.body.animate({
         opacity:[0,1],
         "transform": ""

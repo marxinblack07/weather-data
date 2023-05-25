@@ -6,21 +6,11 @@
 
 .website
 {
-    width: 100%;
-    // background-image: linear-gradient(to left top, #86c8bc, #86d2b9, #8cdcb2, #9ae5a7, #aeec99, #bbf090, #caf388, #daf57f, #e1f67b, #e9f778, #f1f774, #f9f871);
     background-image: linear-gradient(to left bottom, #f7d060, #e0d569, #cbd877, #b7da86, #a7da96, #99d59c, #8cd0a2, #82caa7, #73bfa5, #66b4a1, #5ba99e, #519e99);
     z-index: index($list: var.$z-index, $value: background);
     font-family: Terembura;
-    background-repeat: no-repeat;
 }
-@media (max-width: map-get(var.$breakpoint,lg))
-{
-    .website
-    {
-        // background-image: linear-gradient(to left top, #86c8bc, #89d9b4, #a0e7a2, #c7f289, #f9f871);
-        background-image: linear-gradient(to left bottom, #f7d060, #d9d66e, #bed981, #a7da96, #98d8aa);
-    }
-}
+
 .main
 {
     display: flex;
@@ -204,4 +194,17 @@
         font-size: 18pt;
         color: $color-border;
     }
+}
+.btn__refresh
+{
+    display: block;
+    position: absolute;
+    bottom:18rem;
+    right:1.2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: index($list: var.$z-index, $value: dropdown);
+    background-color: $color-highlight;
+    border-color: $color-background;
+    box-shadow: 2px 2px 4px $color-border;
 }

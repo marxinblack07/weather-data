@@ -1,0 +1,15 @@
+
+@use '../base/variables' as var;
+
+@media (max-width: map-get(var.$breakpoint,lg))
+{
+    .website
+    {
+        // background-image: linear-gradient(to left top, #86c8bc, #89d9b4, #a0e7a2, #c7f289, #f9f871);
+        background-image: linear-gradient(to left bottom, #f7d060, #d9d66e, #bed981, #a7da96, #98d8aa);
+    }
+    .intro
+    {
+        max-width: 85vw;
+    }
+}
